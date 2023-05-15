@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.alfabank.model.controllers.RegisterTableController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="600.0" style="-fx-background-color: d3d3d3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="incomesButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#income" prefHeight="65.0" text="Ingresos" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="balanceButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#balancePressed" prefHeight="65.0" text="Balance" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="expenseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#expensePress" prefHeight="65.0" text="Gastos" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="totalLabelSumatory" alignment="CENTER" layoutX="152.0" layoutY="345.0" prefHeight="33.0" prefWidth="84.0" text="100002" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableMain" layoutX="68.0" layoutY="67.0" prefHeight="262.0" prefWidth="464.0">
+        <columns>
+          <TableColumn fx:id="dateColumn" maxWidth="215.0" minWidth="20.0" prefWidth="138.0" text="Fecha" />
+          <TableColumn fx:id="amountColumn" maxWidth="1.7976931348623157E308" minWidth="20.0" prefWidth="200.0" text="Monto" />
+            <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="125.0" text="Descripción" />
+        </columns>
+      </TableView>
+      <Label fx:id="totalLabelMessage" alignment="CENTER" layoutX="68.0" layoutY="345.0" prefHeight="33.0" prefWidth="84.0" style="-fx-border-radius: 5; -fx-border-color: #d3d3d3;" text="TOTAL" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="addRegisterbutton" layoutX="347.0" layoutY="345.0" mnemonicParsing="false" onAction="#addRegisterAction" prefHeight="33.0" prefWidth="185.0" text="Agregar Registro">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

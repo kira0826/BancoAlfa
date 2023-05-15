@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="464.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.alfabank.model.controllers.RegisterBankMovementController">
+   <children>
+      <VBox alignment="CENTER" layoutX="26.0" layoutY="56.0" prefHeight="307.0" prefWidth="360.0">
+         <children>
+            <TextField fx:id="value" alignment="CENTER" promptText="Ingrese el monto">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="30.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="description" alignment="CENTER" promptText="Ingrese una descripcion breve">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="30.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="typeMovements" prefHeight="25.0" prefWidth="440.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="30.0" top="10.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <DatePicker fx:id="date" prefHeight="33.0" prefWidth="315.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="30.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+      </VBox>
+      <Label layoutX="75.0" layoutY="48.0" text="REGISTRO DE INFORMACIÓN">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="goBackButton" layoutX="45.0" layoutY="363.0" mnemonicParsing="false" onAction="#turnBack" text="Regresar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveMovementButton" layoutX="197.0" layoutY="363.0" mnemonicParsing="false" onAction="#registerMovement" prefHeight="35.0" prefWidth="161.0" text="Registrar movimiento">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
